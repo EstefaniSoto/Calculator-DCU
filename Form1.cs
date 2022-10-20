@@ -164,7 +164,16 @@ namespace Calculator_DCU
                     txtstore.Text = ans.ToString();
                     break;
                 case 4:
-
+                    if (txtstore.Text != "0")
+                    {
+                        ans = num / float.Parse(txtstore.Text);
+                        txtresoult.Text = txtresoult.Text + txtstore.Text;
+                        txtstore.Text = ans.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede dividir por cero!!");
+                    }
                     ans = num / float.Parse(txtstore.Text);
                     txtresoult.Text = txtresoult.Text + txtstore.Text;
                     txtstore.Text = ans.ToString();
